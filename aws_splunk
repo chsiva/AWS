@@ -1,0 +1,10 @@
+aws ec2 describe-instances --filter Name=tag:Name,Values=test | jq 'Reservations[*].Instances[*].InstanceId | not'
+aws --region us-east-1 ec2 describe-instances --query '"Reservations[].Instances[?Tags[?Key == 'Data' && contains(Value, 'foo=yes')][]][].InstanceId'
+
+index=aws route53 eventName="CreateHostedZone" OR index=aws route53 eventName="DeleteHostedZone" userName="role"
+
+index=aws dynamodb eventName="CreateTable" OR index=aws dynamodb eventName="DeleteTable" userName="role"
+
+index=aws kinesis eventName="CreateStream" OR index=aws kinesis eventName="DeleteStream" userName="role"
+
+index=aws firehose eventName="CreateDeliveryStream" OR index=aws firehose eventName="DeleteDeliveryStream" userName="role"
