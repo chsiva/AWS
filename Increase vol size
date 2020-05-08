@@ -1,0 +1,23 @@
+Increase vol size
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
+
+xfs filesystem
+
+lsblk
+sudo growpart /dev/xvda 1
+df -h
+sudo xfs_growfs -d /
+
+ext4 filesystem
+lsblk
+sudo growpart /dev/xvda 1
+df -h
+sudo resize2fs /dev/xvda1
+
+
+-------------------------------------
+
+cd /usr/lib/python3.1/site-packages
+sudo pip uninstall python-urllib3
+yum install python-urllib3
