@@ -2,9 +2,7 @@
 - hosts: localhost
   tasks:    
     - name: get ec2 in my account
-      ec2_instance_info:
-        aws_access_key: "{{ lookup('env','id') }}"
-        aws_secret_key: "{{ lookup('env','key') }}"        
+      ec2_instance_info:        
         region: us-east-2
       register: ec2_info    
         
@@ -18,9 +16,7 @@
         var: ec2_id
         
     - name: Ensure tags are present on a resource
-      ec2_tag:
-        aws_access_key: "{{ lookup('env','id') }}"
-        aws_secret_key: "{{ lookup('env','key') }}"
+      ec2_tag:        
         region: us-east-2
         resource: "{{ item }}"
         state: present
