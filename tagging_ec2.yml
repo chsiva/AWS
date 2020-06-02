@@ -26,4 +26,5 @@
         state: present
         tags:          
           env: jenkins
+          trigger: yes
       with_items: "{{ ec2_id }}"
