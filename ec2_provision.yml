@@ -28,7 +28,9 @@
       
     - name: Provision EC2 Box
       local_action:
-        module: ec2        
+        module: ec2   
+        aws_access_key: "{{ lookup('env','id') }}"
+        aws_secret_key: "{{ lookup('env','key') }}"
         region: "{{ region }}"
         key_name: "{{ ec2_keypair }}"
         group: "{{ aws_security_group }}"
@@ -40,8 +42,6 @@
         termination_protection: "{{ termination_protection }}"
         wait: true
         volumes: "{{ volumes.results | map(attribute='ansible_facts.vol') | list }}"
-        aws_access_key: "{{ lookup('env','id') }}"
-        aws_secret_key: "{{ lookup('env','key') }}"
       register: ec2
       
     - name: Wait for SSH to come up
