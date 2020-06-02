@@ -1,0 +1,50 @@
+---
+- hosts: localhost
+  vars:    
+    ec2_keypair: "AnsibleLinux"
+    aws_security_group: ["myec2secgrp"]
+    ec2_instance_type: "t2.small"
+    ec2_image: "ami-01e36b7901e884a10" # centos
+    ec2_subnet_ids: "subnet-853a8bc9"
+    region: "us-east-2"
+    public_ip: "yes"
+    termination_protection: "no"    
+    number_of_instances: 1       
+    vols:
+      - attach_point: 'sda1'
+        volume_size: '10'     
+  tasks:    
+    - name: create volumes fact
+      set_fact:
+        vol:
+          device_name: '/dev/{{ item.attach_point }}'
+          volume_type: 'gp2'
+          volume_size: "{{ item.volume_size }}"
+          delete_on_termination: 'true'
+      with_items: "{{vols}}"
+      register: volumes
+      
+    - name: Provision EC2 Box
+      local_action:
+        module: ec2        
+        region: "{{ region }}"
+        key_name: "{{ ec2_keypair }}"
+        group: "{{ aws_security_group }}"
+        instance_type: "{{ ec2_instance_type }}"
+        image: "{{ ec2_image }}"
+        vpc_subnet_id: "{{ ec2_subnet_ids}}"        
+        assign_public_ip: "{{ public_ip}}"
+        count: "{{ number_of_instances }}"
+        termination_protection: "{{ termination_protection }}"
+        wait: true
+        volumes: "{{ volumes.results | map(attribute='ansible_facts.vol') | list }}"
+      register: ec2
+      
+    - name: Wait for SSH to come up
+      wait_for:
+        host: "{{ item.private_ip }}"
+        port: 22
+        delay: 20
+        timeout: 500
+        state: started
+      with_flattened: "{{ ec2.instances }}"
