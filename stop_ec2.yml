@@ -9,6 +9,7 @@
           - i-07ad0a6755cf4e37d
           - i-0db033bafa6633bcf
           - i-001d6e72eb0f9afb5
+          - i-0ac3c44d07f736b99 #Jenkins server
       register: ec2_info
 
     - name: stoped instances suceessfully
