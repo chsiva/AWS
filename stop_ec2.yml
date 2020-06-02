@@ -11,7 +11,8 @@
         state: stopped
         instance_ids:
           - i-07ad0a6755cf4e37d
-          - i-0db033bafa6633bcf        
+          - i-0db033bafa6633bcf
+          - i-001d6e72eb0f9afb5
       register: ec2_info
 
     - name: stoped instances suceessfully
