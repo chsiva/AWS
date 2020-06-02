@@ -23,4 +23,5 @@
         tags:          
           env: jenkins
           trigger: yes
+          task: completed
       with_items: "{{ ec2_id }}"
