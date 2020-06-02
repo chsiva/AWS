@@ -19,6 +19,8 @@
         
     - name: Ensure tags are present on a resource
       ec2_tag:
+        aws_access_key: "{{ lookup('env','id') }}"
+        aws_secret_key: "{{ lookup('env','key') }}"
         region: us-east-2
         resource: "{{ item }}"
         state: present
