@@ -16,9 +16,7 @@
   tasks:    
     - name: create volumes fact
       set_fact:
-        vol:
-          aws_access_key: "{{ lookup('env','AWS_ACCESS_KEY_ID') }}"
-          aws_secret_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+        vol:         
           device_name: '/dev/{{ item.attach_point }}'
           volume_type: 'gp2'
           volume_size: "{{ item.volume_size }}"
@@ -28,9 +26,7 @@
       
     - name: Provision EC2 Box
       local_action:
-        module: ec2   
-        aws_access_key: "{{ lookup('env','AWS_ACCESS_KEY_ID') }}"
-        aws_secret_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+        module: ec2        
         region: "{{ region }}"
         key_name: "{{ ec2_keypair }}"
         group: "{{ aws_security_group }}"
