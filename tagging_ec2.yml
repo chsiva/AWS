@@ -21,7 +21,7 @@
         resource: "{{ item }}"
         state: present
         tags:          
-          env: jenkins
+          env: test
           trigger: true
           task: completed
       with_items: "{{ ec2_id }}"
