@@ -22,6 +22,6 @@
         state: present
         tags:          
           env: jenkins
-          trigger: false
+          trigger: true
           task: completed
       with_items: "{{ ec2_id }}"
