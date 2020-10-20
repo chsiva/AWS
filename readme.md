@@ -6,4 +6,4 @@ A.
 
 Q3. Can we change private IP address?
 
-A. There is no chance of changing a private IP address
+Ans. There is no chance of changing a private IP address
