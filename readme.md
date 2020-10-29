@@ -14,8 +14,7 @@ Q4. Encrypt EBS Volumes.Do we need to stop EC2 instance?
     IAM KMS encryption key should be available. Take snapshot of the root volume attached to ec2.
     Create a new Encrypted volume from the encrypted snapshot and Detach the existing volume and attach the Encrypted Volume.
     
-Q5. Purpose of Autoscaling group? horizontal vs vertical scaling?
-
+Q5. Purpose of Autoscaling group? horizontal vs vertical scaling? 
     https://stackoverflow.com/questions/33067241/how-exactly-does-auto-scaling-in-aws-work
 
     
