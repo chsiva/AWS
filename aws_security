@@ -7,7 +7,7 @@
       but can also stop the packet from being delivered based on what kind of attacks it detects — helping stop the attack).
       
 3. SSO - Authentication (Octa tokens(identity pool - Google Authenticator), JWT token, Active directory/LDAP)
-   (https://aws.amazon.com/single-sign-on/)
+   https://aws.amazon.com/single-sign-on/
    
    SAML (Octo federaal protocol).
    
