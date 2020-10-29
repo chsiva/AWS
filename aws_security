@@ -1,6 +1,11 @@
 1. SIEM - Security inform event management (Cloud Trail, Pub/sub).
 
-2. IPS/IDS - AWS Guard Duty 
+   https://docs.aws.amazon.com/awscloudtrail/latest/userguide/how-cloudtrail-works.html
+   
+   https://cloud.google.com/pubsub/docs/overview
+   
+
+2. IPS/IDS - AWS Guard Duty - https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html
 
       (Intrusion Detection Systems (IDS) analyze network traffic for signatures that match known cyberattacks. 
       Intrusion Prevention Systems (IPS) also analyzes packets, 
