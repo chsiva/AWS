@@ -1,3 +1,7 @@
+IAM (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
+
+
+
 Q1. is it a good idea to place database behind autoscaling group?
 
 Ans.
