@@ -22,3 +22,15 @@ Q5. Purpose of Autoscaling group? horizontal vs vertical scaling?
     In order to successfully use auto scaling, you need to design your application using the principle of shared nothing architecture. 
     No persistent data can be stored on the instance itself. Instead you would store it on S3, or other instances not part of autoscaling group.
     
+q6: S3 permissions on bucket itself?
+   
+    Amazon S3 labels the permissions for a bucket as follows:
+
+    1. Public – Everyone has access to one or more of the following: List objects, Write objects, Read and write permissions.
+
+    2. Objects can be public – The bucket is not public, but anyone with the appropriate permissions can grant public access to objects.
+
+    3. Buckets and objects not public – The bucket and objects do not have any public access.
+
+    4. Only authorized users of this account – Access is isolated to IAM users and roles in this account and AWS service principals because there is a policy that          grants public access.
+    
