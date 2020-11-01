@@ -38,3 +38,6 @@ Q6: S3 permissions on bucket itself?
 
     4. Only authorized users of this account – Access is isolated to IAM users and roles in this account and AWS service principals because there is a policy that          grants public access.
     
+ # Cloud Formation
+     Yes, I have used like cloud formation templates before for provisioning services like EC to s3, I am
+    
