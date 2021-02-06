@@ -1,16 +1,21 @@
 
-CloudFormation (CFN) and Terraform (CF) are both Infrastructure as Code (IaC) development tools.
+# CloudFormation (CFN) and Terraform (CF) are both Infrastructure as Code (IaC) development tools.
 
-However, CFN is only for AWS. You can't use it with Azure, GCP or anything else outside of AWS ecosystem. In contrast, TF is cloud agnostic. You can use it across not only multiple cloud providers, but also to work with non-cloud products, such as docker, various databases and even domino pizza if you want.
+However, CFN is only for AWS. You can't use it with Azure, GCP or anything else outside of AWS ecosystem. 
 
-So the main advantage of TF is that once you learn it only once, you can apply it to a number of cloud providers. CFN is only useful in AWS, and once you stop using CFN, you have to learn something new to work with other cloud.
+In contrast, TF is cloud agnostic. You can use it across not only multiple cloud providers, but also to work with non-cloud products, such as docker, 
+various databases and even domino pizza if you want.
 
-There are also difference in how TF and CFN work. Both have their strengths and weekends. For example:
+So the main advantage of TF is that once you learn it only once, you can apply it to a number of cloud providers. 
+CFN is only useful in AWS, and once you stop using CFN, you have to learn something new to work with other cloud.
 
-when you deploy using CFN all resources are available to view in one central location in AWS along with template's source code. Whereas with TF there is no such place. If you login to the AWS console, you have no idea what was created by TF, what was the source code used, etc.
+# There are also difference in how TF and CFN work. Both have their strengths and weekends. For example:
 
-TF has loops and complex data structures and condtions, while CFN does not.
+1. when you deploy using CFN all resources are available to view in one central location in AWS along with template's source code. 
+Whereas with TF there is no such place. If you login to the AWS console, you have no idea what was created by TF, what was the source code used, etc.
 
-CFN has creation policies and update policies, TF has not.
+2. TF has loops and complex data structures and condtions, while CFN does not.
 
-You can control access to CFN using CFN policies and IAM policies. You can't do same with TF as it "lives" outside of AWS.
+3. CFN has creation policies and update policies, TF has not.
+
+4. You can control access to CFN using CFN policies and IAM policies. You can't do same with TF as it "lives" outside of AWS.
