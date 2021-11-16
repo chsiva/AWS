@@ -1,6 +1,6 @@
 # use case of lambda what you have done in the lambda.
 
-promotion of data environment. So there is a service called a catalog service. Data is the data and data. So my role was writing a lambda and this is the same thing you know, we have an event triggered , So UI will  create some data in the folder. So it is like handling the data, it's not even large. So lambda, primarily get that data and figure whenever there is a UI activity that happened in the past or in the folder, it will navigate to s3. Anything that is happening between the Ec2  box and S3 bucket and from there, as soon as they sync, it will trigger and move that into other environments.
+So there is a service called a catalog service (CAS tool that take requests for permission). So my role was writing a lambda and this is the same thing you know, we have an event triggered , So UI will  create some data in the folder. So it is like handling the data, it's not even large. So lambda, primarily get that data and figure whenever there is a UI activity that happened in the past or in the folder, it will navigate to s3. Anything that is happening between the Ec2  box and S3 bucket and from there, as soon as they sync, it will trigger and move that into other environments.
 
 Q: Okay, so I have a very huge volume of data and I'm doing some processing on the data before moving, but it's taking more than like 30 minutes, half an hour to do the processing. So how I can do with the lambda 
 
