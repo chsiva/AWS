@@ -1,3 +1,17 @@
+# use case of lambda what you have done in the lambda.
+
+promotion of data environment. So there is a service called a catalog service. Data is the data and data. So my role was writing a lambda and this is the same thing you know, we have an event triggered , So UI will  create some data in the folder. So it is like handling the data, it's not even large. So lambda, primarily get that data and figure whenever there is a UI activity that happened in the past or in the folder, it will navigate to s3. Anything that is happening between the Ec2  box and S3 bucket and from there, as soon as they sync, it will trigger and move that into other environments.
+
+Q: Okay, so I have a very huge volume of data and I'm doing some processing on the data before moving, but it's taking more than like 30 minutes, half an hour to do the processing. So how I can do with the lambda 
+
+So you have to paralyzed lambdas (multiple API lambda functions) and other lambdas them Right. So you can paralyze it that you've been doing
+if you want to have lambdas, just like acting as a word causes like getting some information, you want to have data, like 1000/10,000 files, and you want 1000 files to be processed.  Please say if you want one lambda doing one after the other, then it will take lot of time. So if u set up timeout in 15 minutes and within this time i will paralyze that and   where  i will add 10 more lamdas So it'll be like 5000. 
+
+
+
+
+
+
 #IAM (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
 
 
